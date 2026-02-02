@@ -1,0 +1,293 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+:global(.dark) .header {
+    background-color: black;
+    color: white;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menuIcon {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ec4899;
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition:
+        text-decoration-thickness 0.5s ease,
+        text-underline-offset 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ec489a96;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+    transform: scale(1.05);
+
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user a,
+.user button {
+    color: inherit;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 0;
+    background-color: transparent;
+    font-size: 1.5rem;
+    transition:
+        text-decoration-thickness 0.3s ease,
+        text-underline-offset 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+.user a:hover,
+.user button:hover {
+    color: #ec4899;
+    transform: scale(1.25);
+
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.iconnav {
+    color: #ec4899;
+    font-size: 35px;
+
+}
+
+.logoText {
+    background: linear-gradient(2deg, #ec4899, #ffffff);
+    font-size: 28px;
+    -webkit-background-clip: text;
+    font-family: "Edu AU VIC WA NT Arrows", cursive;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    background-size: 200% 100%;
+    background-position: 0% 0;
+}
+
+.logoText:hover {
+    transform: scale(1.1);
+    background-position: 100% 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+:global(.dark) .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 2rem;
+    min-width: 300px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    animation: slideIn 0.3s ease;
+}
+
+:global(.dark) .modal {
+    background-color: #1a1a1a;
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1);
+}
+
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #ec4899;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+}
+
+.closeButton:hover {
+    background-color: rgba(236, 72, 153, 0.1);
+    transform: rotate(90deg) scale(1.1);
+}
+
+.modalNav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.modalNav a {
+    text-decoration: none;
+    color: inherit;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.modalNav a:hover {
+    background-color: rgba(236, 72, 153, 0.1);
+    transform: scale(1.05);
+    color: #ec4899;
+}
+
+.modalUser {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+:global(.dark) .modalUser {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.modalUser a,
+.modalUser button {
+    color: inherit;
+    text-decoration: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 0;
+    background-color: transparent;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalUser a:hover,
+.modalUser button:hover {
+    color: #ec4899;
+    transform: scale(1.25);
+    background-color: rgba(236, 72, 153, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+@media (max-width: 1100px) {
+    .nav {
+        display: none;
+    }
+
+    .user {
+        display: none;
+    }
+
+    .navigation {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in;
+        z-index: 100;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+}

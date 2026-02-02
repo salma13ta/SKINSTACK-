@@ -1,0 +1,437 @@
+/* Routine Page Styles */
+
+/* Page Container */
+.routine-page-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f9fafb 0%, #f3f4f6 100%);
+    transition: background 0.3s ease;
+    padding: 3rem 1rem;
+}
+
+.dark .routine-page-container {
+    background: linear-gradient(to bottom, #111827 0%, #0f172a 100%);
+}
+
+/* Main Wrapper */
+.routine-wrapper {
+    max-width: 56rem;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.routine-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.routine-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.75px;
+}
+
+.dark .routine-title {
+    color: #ffffff;
+}
+
+.routine-subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    font-family: 'Inter', sans-serif;
+}
+
+.dark .routine-subtitle {
+    color: #d1d5db;
+}
+
+/* Selection Container */
+.routine-selection-container {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dark .routine-selection-container {
+    background: #1f2937;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Skin Type Selection */
+.skin-type-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dark .skin-type-label {
+    color: #d1d5db;
+}
+
+.skin-type-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.skin-type-button {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background: white;
+    color: #111827;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dark .skin-type-button {
+    background: #111827;
+    border-color: #374151;
+    color: #f3f4f6;
+}
+
+.skin-type-button:hover {
+    border-color: #ec4899;
+}
+
+.skin-type-button.active {
+    background: linear-gradient(to right, #ec4899, #f97316);
+    color: white;
+    border-color: transparent;
+}
+
+/* Time Selection */
+.time-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dark .time-label {
+    color: #d1d5db;
+}
+
+.time-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.time-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 9999px;
+    background: white;
+    color: #111827;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dark .time-button {
+    background: #111827;
+    border-color: #374151;
+    color: #f3f4f6;
+}
+
+.time-button:hover {
+    border-color: #6b7280;
+}
+
+.time-button.active {
+    background: #fbbf24;
+    color: white;
+    border-color: transparent;
+}
+
+.time-button.active-night {
+    background: #6366f1;
+    color: white;
+    border-color: transparent;
+}
+
+.time-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Steps Section */
+.routine-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* Step Card */
+.step-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dark .step-card {
+    background: #1f2937;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.step-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.dark .step-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* Step Number */
+.step-number {
+    width: 3rem;
+    height: 3rem;
+    min-width: 3rem;
+    border-radius: 50%;
+    border: 2px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #9ca3af;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dark .step-number {
+    border-color: #374151;
+    color: #6b7280;
+}
+
+/* Step Content */
+.step-content {
+    flex: 1;
+}
+
+.step-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.25rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dark .step-title {
+    color: #ffffff;
+}
+
+.step-description {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-family: 'Inter', sans-serif;
+}
+
+.dark .step-description {
+    color: #d1d5db;
+}
+
+/* Step Action */
+.step-action {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ec4899;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.step-action:hover {
+    color: #be185d;
+    gap: 0.75rem;
+}
+
+/* Tips Section */
+.routine-tips-container {
+    background: linear-gradient(135deg, #fce7f3 0%, #ffedd5 100%);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.dark .routine-tips-container {
+    background: linear-gradient(135deg, #6b21a84d 0%, #1d004f21 100%);
+}
+
+.routine-tips-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dark .routine-tips-title {
+    color: #ffffff;
+}
+
+.routine-tips-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.routine-tip-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.routine-tip-bullet {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: #ec4899;
+    margin-top: 0.375rem;
+    flex-shrink: 0;
+}
+
+.routine-tip-item:nth-child(even) .routine-tip-bullet {
+    background: #f97316;
+}
+
+.routine-tip-text {
+    color: #374151;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+}
+
+.dark .routine-tip-text {
+    color: #d1d5db;
+}
+
+/* Learn More Button */
+.learn-more-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    background: white;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 600;
+    color: #111827;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dark .learn-more-button {
+    background: #1f2937;
+    color: #ffffff;
+    border: 1px solid #374151;
+}
+
+.learn-more-button:hover {
+    background: #f3f4f6;
+}
+
+.dark .learn-more-button:hover {
+    background: #374151;
+}
+
+.learn-more-icon {
+    width: 1rem;
+    height: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.learn-more-button:hover .learn-more-icon {
+    transform: translateX(0.25rem);
+}
+
+/* Empty State */
+.routine-empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dark .routine-empty-state {
+    background: #1f2937;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.empty-state-text {
+    color: #6b7280;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dark .empty-state-text {
+    color: #d1d5db;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .routine-page-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .routine-title {
+        font-size: 1.875rem;
+    }
+
+    .routine-selection-container {
+        padding: 1.5rem;
+    }
+
+    .skin-type-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .step-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .step-content {
+        text-align: left;
+    }
+
+    .step-action {
+        justify-content: center;
+    }
+
+    .routine-tips-container {
+        padding: 1.5rem;
+    }
+}

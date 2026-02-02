@@ -1,26 +1,123 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #efefef;
+  --pink-primary: #ec4899;
+  --pink-light: #fce7f3;
+  --orange-primary: #f97316;
+  --orange-light: #ffedd5;
+  --gray-900: #111827;
+  --gray-600: #4b5563;
+  --gray-200: #e5e7eb;
+  --gray-100: #f3f4f6;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background-color: black;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark p {
+  color: #f3f4f6;
+}
+
+label {
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+
+button {
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+
+input {
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+}
+
+
+/* Scroll section animations */
+.scroll-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-section.scroll-up {
+  transform: translateY(40px);
+}
+
+.scroll-section.scroll-right {
+  transform: translateX(-40px);
+}
+
+.scroll-section.scroll-left {
+  transform: translateX(40px);
+}
+
+.scroll-section.scroll-scale {
+  transform: scale(0.96) translateY(20px);
+}
+
+.scroll-section.scroll-in-view {
+  opacity: 1;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+span {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.dark span {
+  color: rgb(0 0 0 / 48%);
+}
+.icon{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 10px;
+  color: #000;
+}
+.dark .colo ,
+.dark .icon{
+  color: #fff;
 }
