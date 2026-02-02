@@ -1,5 +1,6 @@
 'use client';
 
+
 import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
@@ -7,6 +8,8 @@ import Link from 'next/link';
 import { products, type SkinType, type SkinConcern } from '@/data/products';
 import { HiMagnifyingGlass } from 'react-icons/hi2';
 import './search.css';
+
+export const dynamic = 'force-dynamic';
 
 const Searchpage = () => {
   const searchParams = useSearchParams();
