@@ -87,7 +87,7 @@ export const products: Product[] = [
     description: 'Intensive moisturizer that strengthens the skin barrier',
     price: 42,
     image: 'https://images.unsplash.com/photo-1686831758227-1802d0ba5eda?w=500',
-    category: 'moisturizer',
+    category: 'treatment',
     skinTypes: ['dry', 'sensitive'],
     concerns: ['hydration'],
     ingredients: ['Ceramide Complex', 'Squalane', 'Peptides'],
@@ -115,9 +115,9 @@ export const products: Product[] = [
     description: 'Gentle retinol formula for smooth, youthful skin',
     price: 52,
     image: 'https://images.unsplash.com/photo-1643379850623-7eb6442cd262?w=500',
-    category: 'treatment',
+    category: 'serum' ,
     skinTypes: ['all'],
-    concerns: ['anti-aging', 'acne'],
+    concerns: ['anti-aging', 'acne' ],
     ingredients: ['Retinol 0.5%', 'Hyaluronic Acid', 'Peptides'],
     usage: 'Apply at night, start 2x per week',
     featured: true,
@@ -139,7 +139,103 @@ export const products: Product[] = [
     bestFor: 'Textured and congested skin',
     whenToApply: 'Evening, 2-3x per week',
     doNotMix: ['Retinol', 'Vitamin C']
-  }
+  },
+{
+  id: '9',
+  name: 'SKIN1004 Madagascar Centella Light Cleansing Oil',
+  description: 'A lightweight cleansing oil that gently dissolves makeup, sunscreen, excess oils, and impurities while calming and hydrating the skin.',
+  price: 27,
+  image: 'https://m.media-amazon.com/images/I/61ZG5xWuA+L._AC_SL1500_.jpg',
+  category: 'cleanser',
+  skinTypes: ['all'],
+  concerns: ['acne', 'hydration'],
+  ingredients: [
+    'Centella Asiatica Extract',
+    'Sunflower Seed Oil',
+    'Jojoba Seed Oil'
+  ],
+  usage: 'Apply to dry skin, massage, emulsify with water, rinse. Follow with water-based cleanser.',
+  featured: true,
+  bestFor: 'Makeup removal and calming acne-prone skin',
+  whenToApply: 'Evening (first cleanse)',
+  doNotMix: []
+},
+{
+  id: '10',
+  name: 'CeraVe Renewing SA Cleanser',
+  description: 'Gentle exfoliating cleanser that unclogs pores and smooths texture.',
+  price: 18,
+  image: 'https://i.pinimg.com/736x/e7/df/ce/e7dfce9bdb847c615823e14df470e770.jpg',
+  category: 'cleanser',
+  skinTypes: ['oily', 'combination', 'all'],
+  concerns: ['acne', 'pigmentation'],
+  ingredients: [
+    'Salicylic Acid',
+    'Ceramides',
+    'Niacinamide',
+    'Hyaluronic Acid'
+  ],
+  usage: 'Use once daily, preferably at night.',
+  featured: false,
+  bestFor: 'Acne, blackheads, rough texture',
+  whenToApply: 'Evening',
+  doNotMix: ['Retinol', 'AHAs/BHAs']
+},
+{
+  id: '11',
+  name: 'CeraVe Hydrating Facial Cleanser',
+  description: 'Non-foaming cleanser that hydrates while cleansing.',
+  price: 16,
+  image: 'https://i.pinimg.com/1200x/80/68/6b/80686b6bc2fe10b7071255001d07169a.jpg',
+  category: 'cleanser',
+  skinTypes: ['dry', 'sensitive', 'all'],
+  concerns: ['hydration'],
+  ingredients: [
+    'Ceramides',
+    'Hyaluronic Acid',
+    'Glycerin'
+  ],
+  usage: 'Use morning and evening.',
+  featured: false,
+  bestFor: 'Dry and sensitive skin',
+  whenToApply: 'Morning and evening',
+  doNotMix: []
+},
+{
+  id: '12',
+  name: 'Garnier Micellar Water (Sensitive)',
+  description: 'Gentle micellar water for sensitive skin.',
+  price: 14,
+  image: 'https://i.pinimg.com/736x/a8/63/05/a86305fab27de670d7adbe750f5bab97.jpg',
+  category: 'moisturizer',
+  skinTypes: ['sensitive', 'dry', 'all'],
+  concerns: ['hydration'],
+  ingredients: ['Micelles', 'Glycerin'],
+  usage: 'Use with cotton pad. No rinse.',
+  featured: false,
+  bestFor: 'Sensitive skin & makeup removal',
+  whenToApply: 'Anytime',
+  doNotMix: []
+},
+{
+  id: '13',
+  name: 'Garnier Micellar Vitamin C',
+  description: 'Brightening micellar water with Vitamin C.',
+  price: 15,
+  image: 'https://i.pinimg.com/736x/57/9a/e0/579ae0640918ff2298f87072b0f1a2b7.jpg',
+  category: 'moisturizer',
+  skinTypes: ['all', 'combination', 'oily'],
+  concerns: ['pigmentation', 'hydration'],
+  ingredients: ['Micelles', 'Vitamin C', 'Glycerin'],
+  usage: 'Use with cotton pad. No rinse.',
+  featured: false,
+  bestFor: 'Dull & uneven skin',
+  whenToApply: 'Morning or evening',
+  doNotMix: []
+}
+
+
+
 ];
 
 export const routineTemplates = {
