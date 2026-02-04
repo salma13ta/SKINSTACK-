@@ -11,7 +11,7 @@ import './search.css';
 
 export const dynamic = 'force-dynamic';
 
-const Searchpage = () => {
+const SearchClient = () => {
   const searchParams = useSearchParams();
   const initialSkinType = searchParams.get('skinType') as SkinType | null;
 
@@ -232,4 +232,4 @@ const Searchpage = () => {
   );
 };
 
-export default Searchpage;
+export default SearchClient;

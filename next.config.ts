@@ -7,7 +7,8 @@ const nextConfig = {
   images: {
     // طريقة استخدام الدومينات مباشرة
     domains: ['images.unsplash.com', 'i.pinimg.com', 'm.media-amazon.com'],
-    // أو طريقة استخدام remotePatterns
+    
+    // طريقة استخدام remotePatterns بدل domains
     remotePatterns: [
       {
         protocol: 'https',
